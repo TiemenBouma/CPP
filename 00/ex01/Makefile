@@ -6,7 +6,7 @@ INCLUDE = -I ./include
 OBJ = $(SRC:%.cpp=%.o)
 
 
-CFLAGS = -Wall -Werror -Wextra -std=c++11
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 

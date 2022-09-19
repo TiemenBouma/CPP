@@ -4,15 +4,16 @@
 #include "Contact.hpp"
 //#include <array>
 
-class	Phonebook
-{
+class	Phonebook {
 	public:
 	void	add(void);
-	// void	search(void);
+	void	init(void);
+	void	search(void);
 
 	private:
 	Contact contacts[8];
 	int		curr_index;
+	int		total_contacts;
 
 
 };

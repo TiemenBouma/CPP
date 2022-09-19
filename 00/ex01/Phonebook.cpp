@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   Phonebook.cpp                                      :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/09/16 15:57:14 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/16 16:28:20 by tiemen        ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/16 15:57:14 by tiemen            #+#    #+#             */
+/*   Updated: 2022/09/19 14:11:45 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
 #include "Phonebook.hpp"
 
-void	Phonebook::add(void)
-{
+void	Phonebook::init(void) {
+	curr_index = 0;
+	total_contacts = 0;
+}
+
+void	Phonebook::add(void) {
 	Contact		tempContact;
 	
 	std::cout << "Enter first name\n";
-	std::cin >> tempContact.first_name;
+	//std::cin >> tempContact.first_name;
+	
+	std::getline(std::cin, tempContact.first_name);
+
 	std::cout << "Enter last name\n";
 	std::cin >> tempContact.last_name;
 	std::cout << "Enter nickname\n";
@@ -31,13 +39,45 @@ void	Phonebook::add(void)
 			|| !tempContact.nickname[0] || !tempContact.phone_number[0]\
 			|| !tempContact.darkest_secret[0])
 		return;
-	std::cout << "DEBUG1\n";
+	std::cout << "Succesfully added: ";
+	std::cout << tempContact.first_name << std::endl;
+	if (total_contacts < 8)
+		total_contacts++;
 	if (curr_index == 8)
 		curr_index = 0;
-	std::cout << "DEBUG2\n";
 	tempContact.index = curr_index;
-	std::cout << "DEBUG3\n";
 	contacts[curr_index] = tempContact;
-	std::cout << "DEBUG4\n";
 	curr_index++;
+}
+
+void	Phonebook::search(void) {
+	int	i;
+	
+	std::cout << "Enter index of contact for contactinfo\n";
+	std::cin >> i;
+	if (i >= total_contacts)
+	{
+		std::cout << "No contact found on this index\n\n";
+		return ;
+	}
+	std::cout << std::right << std::setw(10) << "INDEX";
+	std::cout << "|" << std::right << std::setw(10) << "FIRST NAME";
+	std::cout << "|" << std::right << std::setw(10) << "LAST NAME";
+	std::cout << "|" << std::right << std::setw(10) << "NICKNAME"  << std::endl;
+
+	std::cout << std::right << std::setw(10) << contacts[i].index;
+	if (contacts[i].first_name.length() > 10)
+		std::cout << "|" << std::right << std::setw(10) << contacts[i].first_name.substr(0, 9) + '.';
+	else
+		std::cout << "|" << std::right << std::setw(10) << contacts[i].first_name;
+	
+	if (contacts[i].last_name.length() > 10)
+		std::cout << "|" << std::right << std::setw(10) << contacts[i].last_name.substr(0, 9) + '.';
+	else
+		std::cout << "|" << std::right << std::setw(10) << contacts[i].last_name;
+	
+	if (contacts[i].nickname.length() > 10)
+		std::cout << "|" << std::right << std::setw(10) << contacts[i].nickname.substr(0, 9) + '.' << std::endl;
+	else
+		std::cout << "|" << std::right << std::setw(10) << contacts[i].nickname << std::endl << std::endl;
 }
