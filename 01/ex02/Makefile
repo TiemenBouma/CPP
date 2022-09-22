@@ -5,14 +5,14 @@
 #                                                      +:+                     #
 #    By: tiemen <tiemen@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
-#    Created: 2022/09/20 11:39:33 by tiemen        #+#    #+#                  #
-#    Updated: 2022/09/20 13:37:00 by tiemen        ########   odam.nl          #
+#    Created: 2022/09/22 10:04:58 by tiemen        #+#    #+#                  #
+#    Updated: 2022/09/22 10:05:20 by tiemen        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = Brain
 
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRC = 	main.cpp \
 
 INCLUDE = -I ./include
 OBJ = $(SRC:%.cpp=obj/%.o)

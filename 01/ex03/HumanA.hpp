@@ -6,7 +6,7 @@
 /*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/22 12:28:14 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/22 13:27:32 by tiemen        ########   odam.nl         */
+/*   Updated: 2022/09/22 16:52:47 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,13 @@
 class HumanA
 {
 	public:
-	HumanA(std::string _name, Weapon &weapon);
-	~HumanA();
+	HumanA(std::string _name, Weapon &_weapon);
 	void attack();
 	
 	
 	private:
-	std::string _name;
 	Weapon		&_weapon;
+	std::string _name;
 };
 
 #endif

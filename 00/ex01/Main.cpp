@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 14:59:27 by tiemen            #+#    #+#             */
-/*   Updated: 2022/09/19 14:03:13 by tbouma           ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   Main.cpp                                           :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: tbouma <tbouma@student.42.fr>                +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/09/16 14:59:27 by tiemen        #+#    #+#                 */
+/*   Updated: 2022/09/20 08:51:11 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Phonebook.hpp"
 #include <string>
+#include <cstdlib> 
 
 int	main(void) {
 	Phonebook	myPhonebook;

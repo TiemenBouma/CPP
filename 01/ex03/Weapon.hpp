@@ -6,7 +6,7 @@
 /*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/22 10:46:20 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/22 13:22:39 by tiemen        ########   odam.nl         */
+/*   Updated: 2022/09/22 16:53:56 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 class Weapon
 {
 	public:
+	Weapon();
+	Weapon(std::string type);
 	std::string& getType();
 	void setType(std::string type);
 	

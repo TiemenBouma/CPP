@@ -6,7 +6,7 @@
 /*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/22 13:03:01 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/22 13:25:03 by tiemen        ########   odam.nl         */
+/*   Updated: 2022/09/22 16:26:29 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 int main(void)
 {
 	Weapon bar("Bar with spikes");
+	Weapon &refBar = bar;
 	
-	HumanA Tiemen("Tiemen", bar);
+	HumanA Tiemen("Tiemen", refBar);
 	Tiemen.attack();
 	
 }

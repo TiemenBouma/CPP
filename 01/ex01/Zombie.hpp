@@ -6,7 +6,7 @@
 /*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/20 14:26:18 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/20 14:55:58 by tiemen        ########   odam.nl         */
+/*   Updated: 2022/09/22 09:47:00 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 #include <string>
 #include <iostream>
 
-class Zombie {
+class Zombie
+{
 	public:
 	Zombie();
 	~Zombie();
 	void	announce(void);
-	Zombie *zombieHorde(int N, std::string name);
+	static Zombie *zombieHorde(int N, std::string name);
 	//void	name_it(std::string name);
 	
 	private:
@@ -28,6 +29,6 @@ class Zombie {
 
 };
 
-Zombie*	zombieHorde( int N, std::string name );
+Zombie	*zombieHorde( int N, std::string name );
 #endif
 

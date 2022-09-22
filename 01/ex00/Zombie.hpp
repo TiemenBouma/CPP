@@ -6,7 +6,7 @@
 /*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/20 11:02:52 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/20 11:54:16 by tiemen        ########   odam.nl         */
+/*   Updated: 2022/09/20 14:13:13 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,16 @@
 
 class Zombie {
 	public:
-	Zombie()
-	{
-		std::cout <<"\nconstructor zombie " + name << std::endl;
-	}
-	~Zombie()
-	{
-		std::cout <<"\ndestructor zombie\n";
-	}
+	Zombie(std::string name);
+	~Zombie();
 	void	announce(void);
-	void	name_it(std::string name);
+	//void	name_it(std::string name);
 	
 	private:
 	std::string	name;
 
 };
 
-Zombie	*newZombie(std::string name_2);
+Zombie	*newZombie(std::string name);
 void	randomChump( std::string name );
 #endif

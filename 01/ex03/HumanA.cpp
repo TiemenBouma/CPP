@@ -6,7 +6,7 @@
 /*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/22 12:34:22 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/22 13:19:41 by tiemen        ########   odam.nl         */
+/*   Updated: 2022/09/22 16:52:34 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,7 @@
 #include "Weapon.hpp"
 #include <iostream>
 
-HumanA::HumanA(std::string name, Weapon &weapon)
-{
-		_name = name;
-		_weapon = weapon;
-}
-
-HumanA::~HumanA()
-{
-	std::cout << _name << " is destroyed." << std::endl;
-}
+HumanA::HumanA(std::string name, Weapon &weapon) : _weapon(weapon), _name(name) {}
 
 void HumanA::attack(void)
 {
