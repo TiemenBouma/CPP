@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:55:04 by tiemen            #+#    #+#             */
-/*   Updated: 2022/09/23 08:41:14 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/09/23 11:14:10 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ Weapon::Weapon()
 }
 
 Weapon::Weapon(std::string type) : _type(type) {}
-
-Weapon::~Weapon()
-{
-	std::cout << _type << " is destroyed." << std::endl;
-}
 
 std::string& Weapon::getType()
 {

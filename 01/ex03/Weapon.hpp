@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:46:20 by tiemen            #+#    #+#             */
-/*   Updated: 2022/09/23 08:41:37 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/09/23 11:14:13 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Weapon
 {
 	public:
 	Weapon();
-	~Weapon();
 	Weapon(std::string type);
 	std::string& getType();
 	void setType(std::string type);

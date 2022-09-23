@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:33:18 by tiemen            #+#    #+#             */
-/*   Updated: 2022/09/23 08:37:24 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/09/23 11:15:15 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class HumanB
 {
 	public:
 	HumanB(std::string name);
-	~HumanB();
 	void attack();
 	void setWeapon(Weapon &weapon);
 	

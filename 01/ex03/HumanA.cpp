@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:34:22 by tiemen            #+#    #+#             */
-/*   Updated: 2022/09/23 08:14:29 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/09/23 11:15:37 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 #include <iostream>
 
 HumanA::HumanA(std::string name, Weapon &weapon) : _weapon(weapon), _name(name) {}
-
-HumanA::~HumanA() 
-{
-	std::cout << _name << " destroyed\n";
-}
 
 void HumanA::attack(void)
 {

@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:43:19 by tiemen            #+#    #+#             */
-/*   Updated: 2022/09/23 08:38:11 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/09/23 11:15:10 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@
 HumanB::HumanB(std::string name)
 {
 	_name = name;
-}
-
-HumanB::~HumanB()
-{
-	std::cout << _name << " is destroyed." << std::endl;
 }
 
 void HumanB::attack(void)
