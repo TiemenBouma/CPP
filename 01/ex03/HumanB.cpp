@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   HumanB.cpp                                         :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/09/22 12:43:19 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/22 13:02:45 by tiemen        ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/22 12:43:19 by tiemen            #+#    #+#             */
+/*   Updated: 2022/09/23 08:38:11 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 #include "Weapon.hpp"
 #include <iostream>
 
-HumanB::HumanB()
+HumanB::HumanB(std::string name)
 {
-	
+	_name = name;
 }
 
 HumanB::~HumanB()
 {
-	std::cout << name << " is destroyed." << std::endl;
+	std::cout << _name << " is destroyed." << std::endl;
 }
 
 void HumanB::attack(void)
 {
-	std::cout << name << " attacks with their " << myWeapon.getType() << std::endl;
+	std::cout << _name << " attacks with their " << _weapon->getType() << std::endl;
+}
+
+void HumanB::setWeapon(Weapon &weapon)
+{
+	_weapon = &weapon;
 }

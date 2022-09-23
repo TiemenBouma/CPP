@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   Weapon.cpp                                         :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/09/22 10:55:04 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/22 16:36:48 by tiemen        ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/22 10:55:04 by tiemen            #+#    #+#             */
+/*   Updated: 2022/09/23 08:41:14 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
+#include <iostream>
 
 Weapon::Weapon() 
 {
 	_type = "";
 }
 
-// Weapon::Weapon(std::string type)
-// {
-// 	_type = type;
-// }
 Weapon::Weapon(std::string type) : _type(type) {}
+
+Weapon::~Weapon()
+{
+	std::cout << _type << " is destroyed." << std::endl;
+}
 
 std::string& Weapon::getType()
 {
