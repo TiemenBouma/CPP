@@ -6,3 +6,5 @@
 01/ex01/Zombie
 01/ex00/Zombie
 obj/
+infile*
+replace
