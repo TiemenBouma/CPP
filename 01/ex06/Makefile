@@ -6,7 +6,7 @@
 #    By: tiemen <tiemen@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/02 10:10:24 by tiemen        #+#    #+#                  #
-#    Updated: 2022/10/02 12:16:45 by tiemen        ########   odam.nl          #
+#    Updated: 2022/10/03 09:19:13 by tiemen        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC = 	main.cpp \
 INCLUDE = -I ./include
 OBJ = $(SRC:%.cpp=obj/%.o)
 
-CFLAGS = -Wall  -Wextra -std=c++98 #-Werror
+CFLAGS = -Wall  -Wextra -std=c++98 -Werror
 
 all: $(NAME)
 
