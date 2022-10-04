@@ -3,7 +3,8 @@
 
 int main( void ) 
 {
-	Fixed a;
+	float ff = 0.1;
+	Fixed a(ff);
 	Fixed b( a );
 	Fixed c;
 	
