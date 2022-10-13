@@ -2,8 +2,7 @@ NAME = clap
 
 SRC = 	main.cpp \
 		ClapTrap.cpp \
-		ScavTrap.cpp \
-		fragTrap.cpp
+		ScavTrap.cpp
 
 INCLUDE = -I ./include
 OBJ = $(SRC:%.cpp=obj/%.o)

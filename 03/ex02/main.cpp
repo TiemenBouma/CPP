@@ -1,15 +1,16 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
 	ClapTrap clap("Tiemen");
 
-	ScavTrap a("Quilfort");
-	ScavTrap b("Hein");
-	ScavTrap c(a);
+	FragTrap a("Quilfort");
+	FragTrap b("Hein");
+	FragTrap c(a);
 	std::cout << "DEBUG1\n";
-	ScavTrap d;
+	FragTrap d;
 	std::cout << "DEBUG2\n";
 	d = b;
 
@@ -24,7 +25,7 @@ int main(void)
 	a.beRepaired(5);
 	// a.takeDamage(10);
 	// b.beRepaired(5);
-	c.guardGate();
+	c.highFivesGuys();
 	d.attack("Zake");
 
 
