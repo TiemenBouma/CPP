@@ -25,7 +25,7 @@ int main(void)
 	a.beRepaired(5);
 	// a.takeDamage(10);
 	// b.beRepaired(5);
-	c.highFivesGuys();
+	a.highFivesGuys();
 	d.attack("Zake");
 
 
