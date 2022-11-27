@@ -2,7 +2,6 @@
 #define CONTACT_CPP
 
 #include <string>
-//#include <array>
 
 class	Contact
 {

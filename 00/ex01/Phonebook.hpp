@@ -2,7 +2,6 @@
 #define PHONEBOOK_CPP
 
 #include "Contact.hpp"
-//#include <array>
 
 class	Phonebook {
 	public:

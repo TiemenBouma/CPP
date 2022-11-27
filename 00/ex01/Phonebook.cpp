@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   Phonebook.cpp                                      :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: tbouma <tbouma@student.42.fr>                +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/09/16 15:57:14 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/20 09:46:13 by tiemen        ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/16 15:57:14 by tiemen            #+#    #+#             */
+/*   Updated: 2022/11/27 13:44:58 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	Phonebook::init(void) {
 
 void	Phonebook::add(void) {
 	Contact		tempContact;
-	//std::string	buff;
 	
 	std::cout << "Enter first name\n";
 	std::cin.ignore();
