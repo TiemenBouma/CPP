@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:43:19 by tiemen            #+#    #+#             */
-/*   Updated: 2022/09/23 11:15:10 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/11/29 13:51:08 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ HumanB::HumanB(std::string name)
 {
 	_name = name;
 }
+
+HumanB::~HumanB()
+{}
 
 void HumanB::attack(void)
 {

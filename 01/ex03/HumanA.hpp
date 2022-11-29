@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:28:14 by tiemen            #+#    #+#             */
-/*   Updated: 2022/09/23 11:15:29 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/11/29 13:53:15 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@
 class HumanA
 {
 	public:
-	HumanA(std::string _name, Weapon &_weapon);
-	void attack();
-	
+		HumanA(std::string _name, Weapon &_weapon);
+		~HumanA();
+		void attack();
 	private:
-	Weapon		&_weapon;
-	std::string _name;
+		Weapon		&_weapon;
+		std::string _name;
 };
 
 #endif
