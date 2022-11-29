@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/09/20 11:27:22 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/20 13:57:38 by tiemen        ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/20 11:27:22 by tiemen            #+#    #+#             */
+/*   Updated: 2022/11/29 10:03:13 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-
-
 int main(void) {
-	Zombie	*myZombie;
+	Zombie	myZombie("Tiemen");
+	Zombie	*ptrZombie;
 	
-	myZombie = newZombie("Bert");
-	(*myZombie).announce();
+	ptrZombie = newZombie("Bert");
+	(*ptrZombie).announce();
+	myZombie.announce();
 	randomChump("Bas");
-	delete myZombie;
+	delete ptrZombie;
 }

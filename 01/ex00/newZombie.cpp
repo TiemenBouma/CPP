@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   newZombie.cpp                                      :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/09/20 11:11:34 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/20 14:08:52 by tiemen        ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/20 11:11:34 by tiemen            #+#    #+#             */
+/*   Updated: 2022/11/29 09:56:22 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 Zombie	*newZombie(std::string name)
 {
+	return new Zombie(name);
+}
 	// Zombie	*ptrZombie;
 	// //Zombie	myZombie;
 
@@ -22,5 +24,3 @@ Zombie	*newZombie(std::string name)
 	// //*ptrZombie = myZombie;
 	// (*ptrZombie).name_it(name);
 	// return ptrZombie;
-	return new Zombie(name);
-}
