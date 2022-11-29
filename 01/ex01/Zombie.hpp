@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   Zombie.hpp                                         :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/09/20 14:26:18 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/09/22 09:47:00 by tiemen        ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/20 14:26:18 by tiemen            #+#    #+#             */
+/*   Updated: 2022/11/29 13:23:03 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_CPP
 #define ZOMBIE_CPP
 #include <string>
-#include <iostream>
 
 class Zombie
 {
 	public:
-	Zombie();
-	~Zombie();
-	void	announce(void);
-	static Zombie *zombieHorde(int N, std::string name);
-	//void	name_it(std::string name);
-	
+		Zombie();
+		Zombie(std::string name);
+		~Zombie();
+		void	announce(void);
+		static Zombie *zombieHorde(int N, std::string name);
 	private:
-	std::string	name;
+		std::string	_name;
 
 };
 
-Zombie	*zombieHorde( int N, std::string name );
+//Zombie	*zombieHorde( int N, std::string name );
 #endif
 
