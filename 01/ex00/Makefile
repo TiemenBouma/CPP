@@ -1,23 +1,19 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                         ::::::::             #
-#    Makefile                                           :+:    :+:             #
-#                                                      +:+                     #
-#    By: tiemen <tiemen@student.codam.nl>             +#+                      #
-#                                                    +#+                       #
-#    Created: 2022/09/20 11:39:33 by tiemen        #+#    #+#                  #
-#    Updated: 2022/09/20 13:37:00 by tiemen        ########   odam.nl          #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/09/20 11:39:33 by tiemen            #+#    #+#              #
+#    Updated: 2022/11/29 09:42:39 by tbouma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Zombie
-
 SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
-
 INCLUDE = -I ./include
 OBJ = $(SRC:%.cpp=obj/%.o)
-
-
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
