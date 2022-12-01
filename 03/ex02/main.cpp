@@ -23,10 +23,8 @@ int main(void)
 	d.attack("Mithras");
 	a.takeDamage(3);
 	a.beRepaired(5);
-	// a.takeDamage(10);
-	// b.beRepaired(5);
-	a.highFivesGuys();
 	d.attack("Zake");
+	a.highFivesGuys();
 
 
 }

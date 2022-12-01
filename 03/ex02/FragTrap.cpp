@@ -17,11 +17,16 @@ FragTrap::FragTrap(const std::string Name)
 	std::cout << _name << ": Named FragTrap constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& other)
+FragTrap::FragTrap(const FragTrap& other) 
+	: ClapTrap(other)
 {
 	*this = other;
 	std::cout << _name << ": Copy FragTrap constructor called" << std::endl;
 }
+// {
+// 	*this = other;
+// 	std::cout << _name << ": Copy FragTrap constructor called" << std::endl;
+// }
 
 
 void FragTrap::highFivesGuys(void)

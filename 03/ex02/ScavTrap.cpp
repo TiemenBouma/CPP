@@ -18,11 +18,16 @@ ScavTrap::ScavTrap(const std::string Name)
 	std::cout << _name << ": Named ScavTrap constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& other)
+ScavTrap::ScavTrap(const ScavTrap& other) 
+	: ClapTrap(other)
 {
 	*this = other;
 	std::cout << _name << ": Copy ScavTrap constructor called" << std::endl;
 }
+// {
+// 	*this = other;
+// 	std::cout << _name << ": Copy ScavTrap constructor called" << std::endl;
+// }
 
 //METHODS
 void ScavTrap::attack(const std::string& target)
