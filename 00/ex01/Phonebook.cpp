@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:57:14 by tiemen            #+#    #+#             */
-/*   Updated: 2022/12/02 11:55:44 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/02 12:06:00 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 #include <iomanip>
 #include <string>
 #include "Phonebook.hpp"
-
-
-
 
 void	Phonebook::init(void) 
 {
