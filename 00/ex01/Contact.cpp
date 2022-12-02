@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   Contact.cpp                                        :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/12/01 11:41:27 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/12/01 17:12:52 by tiemen        ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/01 11:41:27 by tiemen            #+#    #+#             */
+/*   Updated: 2022/12/02 11:31:25 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,30 +30,56 @@ void	Contact::set_first(void)
 	std::cout << "Enter first name\n";
 	std::cin.ignore();
 	std::getline (std::cin, _first_name);
+	while (_first_name.length() == 0)
+	{
+		std::cout << "Empty input, enter first name:\n";
+		std::getline (std::cin, _first_name);
+	}
+	
 }
 
 void	Contact::set_last(void)
 {
 	std::cout << "Enter last name\n";
 	std::getline (std::cin, _last_name);
+	while (_last_name.length() == 0)
+	{
+		std::cout << "Empty input, enter last name:\n";
+		std::getline (std::cin, _last_name);
+	}
 }
 
 void	Contact::set_nickname(void)
 {
 	std::cout << "Enter nickname\n";
 	std::getline (std::cin, _nickname);
+	while (_nickname.length() == 0)
+	{
+		std::cout << "Empty input, enter nickname:\n";
+		std::getline (std::cin, _nickname);
+	}
 }
 
 void	Contact::set_phone(void)
 {
-	std::cout << "Enter phonenumber\n";
+	std::cout << "Enter phone number\n";
 	std::getline (std::cin, _phone_number);
+	while (_phone_number.length() == 0)
+	{
+		std::cout << "Empty input, enter phone number:\n";
+		std::getline (std::cin, _phone_number);
+	}
 }
 
 void	Contact::set_secret(void)
 {
 	std::cout << "Enter darkest secret\n";
 	std::getline (std::cin, _darkest_secret);
+	while (_darkest_secret.length() == 0)
+	{
+		std::cout << "Empty input, enter darkest secret:\n";
+		std::getline (std::cin, _darkest_secret);
+	}
 }
 
 void	Contact::set_index(unsigned int index)

@@ -10,9 +10,10 @@ class	Phonebook {
 	void	search(void);
 
 	private:
-	Contact contacts[8];
-	int		curr_index;
-	int		total_contacts;
+	Contact _contacts[8];
+	int		_curr_index;
+	int		_total_contacts;
+	int		_total_added;
 
 
 };
