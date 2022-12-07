@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: tiemen <tiemen@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/10/02 11:53:06 by tiemen        #+#    #+#                 */
-/*   Updated: 2022/10/03 09:13:14 by tiemen        ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/02 11:53:06 by tiemen            #+#    #+#             */
+/*   Updated: 2022/12/07 17:16:26 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	}
 	std::string strarr[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	std::string input = argv[1];
-	e_msg msg;
+	e_msg msg =  (enum e_msg)4;
 	for (int i = 0; i < 4; i++)
 	{
 		if (strarr[i] == input)
@@ -51,5 +51,8 @@ int main(int argc, char **argv)
 			std::cout << "[ ERROR ]" << std::endl;
 			myHarl.complain("ERROR");
 			std::cout << std::endl;
+			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
