@@ -6,35 +6,33 @@
 #    By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/05 12:10:48 by tbouma            #+#    #+#              #
-#    Updated: 2022/12/05 12:19:05 by tbouma           ###   ########.fr        #
+#    Updated: 2022/12/07 10:03:31 by tbouma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := account
-GCC := c++
-FLAGS := -std=c++98 -Wall -Wextra -Werror -g -pedantic
-SRC :=				Account.cpp \
-					test.cpp
-INC :=				Account.hpp
-OBJ_DIR	:=			obj
-OBJ :=				$(addprefix $(OBJ_DIR)/, $(SRC:%.cpp=%.o))
 
+NAME = account
+SRC = 		Account.cpp \
+			test.cpp
+INCLUDE = -I ./include
+OBJ = $(SRC:%.cpp=obj/%.o)
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-all : $(NAME)
+all: $(NAME)
 
-$(OBJ_DIR)/%.o : %.cpp
+$(NAME): $(OBJ)
+	c++ $(OBJ) -o $(NAME)
+
+obj/%.o: %.cpp
 	@mkdir -p $(dir $@)
-	$(GCC) $(FLAGS) -c $< -o $@
+	c++ -c $(INLCUDE) $(CFLAGS) $< -o $@
 
-$(NAME) : $(OBJ)
-	$(GCC) $(FLAGS) $^ -o $@
+clean:
+	rm -f $(OBJ)
+	rm -rf obj/
 
-clean : 
-	rm -rf $(OBJ_DIR)
+fclean: clean
+	rm -f $(NAME)
 
-fclean : clean
-	rm -rf $(NAME)
-
-re : fclean all
-
-.PHONY : clean, fclean, all, re, verbose
+.PHONY: clean fclean
+re:	fclean all

@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:57:14 by tiemen            #+#    #+#             */
-/*   Updated: 2022/12/02 12:06:00 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/07 10:13:00 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,11 @@ void	Phonebook::search(void) {
 	long	index;
 	char *endptr;
 	std::string temp;
-	
+	if (_total_added == 0)
+		{
+			std::cout << "No contacts in list, returned to main menu\n";
+			return;
+		}
 	std::cout << std::right << std::setw(10) << "INDEX";
 	std::cout << "|" << std::right << std::setw(10) << "FIRST NAME";
 	std::cout << "|" << std::right << std::setw(10) << "LAST NAME";
