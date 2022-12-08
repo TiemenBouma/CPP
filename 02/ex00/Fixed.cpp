@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 13:54:46 by tbouma            #+#    #+#             */
-/*   Updated: 2022/12/02 13:54:47 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/07 17:59:40 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ int Fixed::getRawBits( void ) const
 
 void Fixed::setRawBits( int const rawbit)
 {
-	//std::cout << "setRawBits member function called" << std::endl;
+	std::cout << "setRawBits member function called" << std::endl;
 	_fixed_point = rawbit;
 }
