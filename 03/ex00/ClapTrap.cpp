@@ -6,25 +6,44 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 13:55:59 by tbouma            #+#    #+#             */
-/*   Updated: 2022/12/02 13:56:00 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/09 10:57:41 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap(std::string Name)
+ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "Default constructor called" << std::endl;
-	_name = Name;
+	std::cout << "Default constructor ClapTrap called" << std::endl;
+	_name = name;
 	_hp = 10;
 	_mana = 10;
 	_attack = 0;
 }
 
+ClapTrap::ClapTrap(ClapTrap &other)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	_name = other._name;
+	_hp = other._hp;
+	_mana = other._mana;
+	_attack = other._attack;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	_name = other.get_name();
+	_hp = other.get_hp();
+	_mana = other.get_mana();
+	_attack = other.get_attack();
+	return *this;
+}
+
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor ClapTrap called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
@@ -60,3 +79,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 	std::cout << "ClapTrap " << _name << " repairs itself for " << amount 
 		<< " HP. Total HP is " << _hp << ".\n";
 }
+
+std::string ClapTrap::get_name() const {return _name;}
+int ClapTrap::get_hp() const {return _hp;}
+int ClapTrap::get_mana() const {return _mana;}
+int ClapTrap::get_attack() const {return _attack;}
