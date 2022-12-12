@@ -6,7 +6,7 @@
 #    By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 13:58:13 by tbouma            #+#    #+#              #
-#    Updated: 2022/12/02 13:58:14 by tbouma           ###   ########.fr        #
+#    Updated: 2022/12/12 15:14:39 by tbouma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME = clap
 SRC = 	main.cpp \
 		ClapTrap.cpp \
 		ScavTrap.cpp \
-		FragTrap.cpp
+		FragTrap.cpp \
+		DiamondTrap.cpp
 
 INCLUDE = -I ./include
 OBJ = $(SRC:%.cpp=obj/%.o)

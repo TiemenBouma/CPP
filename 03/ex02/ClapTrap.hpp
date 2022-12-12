@@ -6,13 +6,12 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 13:56:53 by tbouma            #+#    #+#             */
-/*   Updated: 2022/12/02 13:56:54 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/12 14:11:51 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
-//#pragma once
 
 #include <string>
 #include <iostream>
@@ -30,6 +29,7 @@ class ClapTrap
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
+		void set_name(std::string name);
 	protected:
 		ClapTrap(const std::string name, int hp, int mana, int attack);
 		std::string 	_name;

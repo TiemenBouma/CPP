@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 13:56:48 by tbouma            #+#    #+#             */
-/*   Updated: 2022/12/02 13:56:49 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/12 13:29:53 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 	_hp = other._hp;
 	_mana = other._mana;
 	_attack = other._attack;
+	std::cout <<_name << ": ClapTrap Copy assignment operator called" << std::endl;
 	return *this;
 }
 
@@ -85,4 +86,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 	_hp = _hp + amount;
 	std::cout << "ClapTrap " << _name << " repairs itself for " << amount 
 		<< " HP. Total HP is " << _hp << ".\n";
+}
+
+void ClapTrap::set_name(std::string name)
+{
+	_name = name;
 }
