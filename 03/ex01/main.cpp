@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 13:56:29 by tbouma            #+#    #+#             */
-/*   Updated: 2022/12/02 13:56:30 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/12 13:23:45 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ int main(void)
 	d.attack("Mithras");
 	a.takeDamage(3);
 	a.beRepaired(5);
-	// a.takeDamage(10);
-	// b.beRepaired(5);
 	c.guardGate();
 	d.attack("Zake");
+	d.beRepaired(10);
+	d.set_name("hein2");
 
 
 }

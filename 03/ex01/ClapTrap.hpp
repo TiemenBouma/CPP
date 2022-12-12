@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 13:56:23 by tbouma            #+#    #+#             */
-/*   Updated: 2022/12/02 13:56:25 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/12 13:14:20 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class ClapTrap
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
+		void set_name(std::string name);
 	protected:
 		ClapTrap(const std::string name, int hp, int mana, int attack);
 		std::string 	_name;
