@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 13:58:49 by tbouma            #+#    #+#             */
-/*   Updated: 2022/12/02 13:58:50 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/13 13:29:02 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 #define CAT_HPP
 #pragma once
 
-class Cat
+#include "Animal.hpp"
+
+class Cat : public Animal
 {
 public:
 	Cat();
 	~Cat();
+
+	void makeSound() const;
 private:
 };
 
