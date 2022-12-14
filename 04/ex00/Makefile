@@ -6,16 +6,18 @@
 #    By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 13:59:00 by tbouma            #+#    #+#              #
-#    Updated: 2022/12/02 13:59:01 by tbouma           ###   ########.fr        #
+#    Updated: 2022/12/14 09:04:55 by tbouma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = clap
+NAME = ex00
 
 SRC = 	main.cpp \
 		Animal.cpp \
+		WrongAnimal.cpp \
 		Dog.cpp \
-		Cat.cpp
+		Cat.cpp \
+		WrongCat.cpp
 
 INCLUDE = -I ./include
 OBJ = $(SRC:%.cpp=obj/%.o)

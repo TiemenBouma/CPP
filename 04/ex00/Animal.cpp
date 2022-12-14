@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 13:58:37 by tbouma            #+#    #+#             */
-/*   Updated: 2022/12/13 13:29:24 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/12/14 08:55:01 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void Animal::makeSound() const
 	std::cout << "BLUB" << std::endl;
 }
 
-std::string &getType() const
+const std::string &Animal::getType() const
 {
 	return _type;
 }
