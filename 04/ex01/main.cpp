@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/13 10:00:38 by tbouma        #+#    #+#                 */
-/*   Updated: 2022/12/14 13:55:02 by tbouma        ########   odam.nl         */
+/*   Updated: 2022/12/15 13:32:42 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 #include "Cat.hpp"
 #include "WrongCat.hpp"
 
-void leaks()
-{
-	system("leaks ex01");
-}
+// void leaks()
+// {
+// 	system("leaks ex01");
+// }
 
 int main()
 {
-	atexit(leaks);
+	//atexit(leaks);
 	Dog dog;
  	std::cout << std::endl;
  	Dog	dog2(dog);

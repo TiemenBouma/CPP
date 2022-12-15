@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/14 09:49:34 by tbouma        #+#    #+#                 */
-/*   Updated: 2022/12/14 11:15:56 by tbouma        ########   odam.nl         */
+/*   Updated: 2022/12/15 13:34:00 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define BRAIN_H
 
 #include <string>
-#include <array>
 #include <iostream>
 
 class Brain

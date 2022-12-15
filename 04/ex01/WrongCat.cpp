@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/14 09:38:06 by tbouma        #+#    #+#                 */
-/*   Updated: 2022/12/14 09:38:12 by tbouma        ########   odam.nl         */
+/*   Updated: 2022/12/15 13:35:33 by tiemen        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ WrongCat::WrongCat()
 }
 
 WrongCat::WrongCat(const WrongCat &other)
+	: WrongAnimal("WrongCat")
 {
 	std::cout << _type << ": WrongCAT Copy constructor" << std::endl;
 	*this = other;
