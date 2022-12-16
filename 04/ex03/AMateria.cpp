@@ -1,0 +1,43 @@
+
+
+#include "AMateria.hpp"
+#include <string>
+#include <iostream>
+
+AMateria::AMateria() 
+{
+
+}
+
+AMateria::AMateria(std::string const & type) 
+	: _type(type) 
+{
+	
+}
+
+AMateria::AMateria(const AMateria& other) 
+{
+	*this = other;
+}
+
+AMateria&	AMateria::operator=(const AMateria& other) 
+{
+	_type = other.getType();
+	return *this;
+}
+
+AMateria::~AMateria() 
+{
+
+}
+
+std::string const &AMateria::getType() const 
+{
+	return _type;
+}
+
+
+void	AMateria::use(ICharacter &target) 
+{
+	std::cout << " * uses materia on " << target.getName() << " *" << std::endl;
+}
