@@ -6,7 +6,11 @@
 /*   By: tbouma <tbouma@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/13 10:00:38 by tbouma        #+#    #+#                 */
+<<<<<<< HEAD
 /*   Updated: 2022/12/14 15:27:00 by tbouma        ########   odam.nl         */
+=======
+/*   Updated: 2022/12/15 13:32:42 by tiemen        ########   odam.nl         */
+>>>>>>> 985b3c431e3c167adda7af902ac97a365c91b74e
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +20,7 @@
 #include "Cat.hpp"
 #include "WrongCat.hpp"
 
+<<<<<<< HEAD
 void leaks()
 {
 	system("leaks ex01 | grep \"leaks for \"");
@@ -30,6 +35,16 @@ int main()
 	// delete j;//should not create a leak
 	// delete i;
 	// return 0;
+=======
+// void leaks()
+// {
+// 	system("leaks ex01");
+// }
+
+int main()
+{
+	//atexit(leaks);
+>>>>>>> 985b3c431e3c167adda7af902ac97a365c91b74e
 	Dog dog;
  	std::cout << std::endl;
  	Dog	dog2(dog);

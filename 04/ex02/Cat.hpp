@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Brain.hpp                                          :+:    :+:            */
+/*   Cat.hpp                                            :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: tbouma <tbouma@student.codam.nl>             +#+                     */
+/*   By: tbouma <tbouma@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/12/14 09:49:34 by tbouma        #+#    #+#                 */
-/*   Updated: 2022/12/15 13:34:00 by tiemen        ########   odam.nl         */
+/*   Created: 2022/12/02 13:58:49 by tbouma        #+#    #+#                 */
+/*   Updated: 2022/12/14 11:52:17 by tbouma        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_H
-#define BRAIN_H
+#ifndef CAT_HPP
+#define CAT_HPP
+#pragma once
 
-#include <string>
-#include <iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class Brain
+class Cat : public Animal
 {
 public:
-    Brain();
-	Brain(const Brain &other);
-	Brain &operator=(const Brain &other);
-    ~Brain();
+	Cat();
+	Cat(const Cat &other);
+	Cat &operator=(const Cat &other);
+	~Cat();
 
-	void print_idea(int i) const ;
-
+	void makeSound() const;
+	const Brain* get_brain() const;
 private:
-	std::string _ideas[100];
+	Brain *_brain;
 };
 
 #endif
