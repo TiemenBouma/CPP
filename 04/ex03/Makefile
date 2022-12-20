@@ -1,9 +1,6 @@
 NAME := ex03
-
 CC := c++
-
 FLAGS := -std=c++98 -Wall -Wextra -Werror
-
 SRC :=				main.cpp \
 					AMateria.cpp \
 					MateriaSource.cpp \
@@ -11,9 +8,7 @@ SRC :=				main.cpp \
 					Cure.cpp \
 					Ice.cpp
 
-
 OBJ = $(SRC:%.cpp=obj/%.o)
-
 
 all: $(NAME)
 
