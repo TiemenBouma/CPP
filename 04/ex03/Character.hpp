@@ -5,9 +5,6 @@
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
 
-#include <string>
-#include <iostream>
-
 class ICharacter;
 
 class	Character : public ICharacter

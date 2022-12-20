@@ -1,9 +1,5 @@
-
-
 #include "MateriaSource.hpp"
 
-#include <string>
-#include <iostream>
 
 MateriaSource::MateriaSource()
 {

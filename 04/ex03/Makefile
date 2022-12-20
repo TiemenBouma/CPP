@@ -1,10 +1,8 @@
-
-
 NAME := ex03
 
-GCC := clang++
+CC := c++
 
-FLAGS := -std=c++98 -Wall -Wextra -Werror  -g -fsanitize=address
+FLAGS := -std=c++98 -Wall -Wextra -Werror
 
 SRC :=				main.cpp \
 					AMateria.cpp \
@@ -20,11 +18,11 @@ OBJ = $(SRC:%.cpp=obj/%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	c++ $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 obj/%.o: %.cpp
 	@mkdir -p $(dir $@)
-	c++ -c $(INLCUDE) $(FLAGS) $< -o $@
+	$(CC) -c $(INLCUDE) $(FLAGS) $< -o $@
 
 clean:
 	rm -f $(OBJ)
