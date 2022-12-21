@@ -10,20 +10,21 @@ class	Bureaucrat
 	private:
 		const std::string	_name;
 		int					_grade;
-		Bureaucrat&	operator=(const Bureaucrat& other );
 	public:
+		Bureaucrat& operator=(const Bureaucrat &other );
 		Bureaucrat( void );
-		Bureaucrat(const Bureaucrat& other);
+		Bureaucrat(const Bureaucrat &other);
 		Bureaucrat(const std::string name, const int grade);
 		~Bureaucrat( void );
-		
 
-		class GradeTooHighException : public std::exception {
+		class GradeTooHighException : public std::exception 
+		{
 			public:
 				GradeTooHighException();
 		};
 
-		class GradeTooLowException : public std::exception{ 
+		class GradeTooLowException : public std::exception
+		{ 
 			public:
 				GradeTooLowException();
 		};
@@ -34,7 +35,6 @@ class	Bureaucrat
 		void		decrement();
 
 };
-
-std::ostream &operator<<(std::ostream &os, const Bureaucrat &other);
+std::ostream& operator<<(std::ostream &os, const Bureaucrat &other);
 
 #endif

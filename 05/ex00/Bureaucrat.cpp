@@ -1,32 +1,18 @@
 #include "Bureaucrat.hpp"
+#include <string>
 
 Bureaucrat::Bureaucrat( void )
-: _name("X"), _grade(150) 
-{
+: _name("X"), _grade(150) {
 	std::cout << _name << ": Default constructor Bureaucrat with level " << _grade << std::endl;
 }
 
 Bureaucrat::Bureaucrat( const Bureaucrat& other )
-	: _name(other._name), _grade(other._grade)
-{
+: _name(other._name), _grade(other._grade) {
 	std::cout << _name << ": Copy contructor Bureaucrat called with level " << _grade << std::endl;
 }
 
-Bureaucrat&	Bureaucrat::operator=( const Bureaucrat& other ) 
-{
-	std::cout << "illigal Bureaucrat copy assignment called" << std::endl;
-	(void)other;
-	return (*this);
-}
-
-Bureaucrat::~Bureaucrat( void ) 
-{
-	std::cout << _name << ": Default Bureaucrat destructor called" << std::endl;
-}
-
 Bureaucrat::Bureaucrat(const std::string name, int grade)
-: _name(name), _grade(grade) 
-{
+: _name(name), _grade(grade) {
 	if (_grade < 1)
 		throw (GradeTooHighException());
 	else if (_grade > 150)
@@ -34,14 +20,23 @@ Bureaucrat::Bureaucrat(const std::string name, int grade)
 	std::cout << _name << ": Bureaucrat name/grade constructor called with level " << _grade << std::endl;
 }
 
-std::ostream &operator<<(std::ostream &os, const Bureaucrat &other) 
-{
+Bureaucrat&	Bureaucrat::operator=( const Bureaucrat& other ) {
+	//_name = other._name;
+	_grade = other._grade;
+	std::cout << "Bureaucrat copy assignment called" << std::endl;
+	return (*this);
+}
+
+Bureaucrat::~Bureaucrat( void ) {
+	std::cout << _name << ": Default Bureaucrat destructor called" << std::endl;
+}
+
+std::ostream& operator<<(std::ostream &os, const Bureaucrat &other) {
 	os << other.getName() << ", bureaucrat grade " << other.getGrade();
 	return os;
 }
 
-Bureaucrat::GradeTooHighException::GradeTooHighException() 
-{
+Bureaucrat::GradeTooHighException::GradeTooHighException() {
 	std::cout << "Grade to high exception" << std::endl;
 }
 
@@ -62,10 +57,5 @@ void	Bureaucrat::decrement() {
 	this->_grade++;
 }
 
-std::string	Bureaucrat::getName() const{
-	return(this->_name);
-}
-
-int	Bureaucrat::getGrade() const{
-	return(this->_grade);
-}
+std::string	Bureaucrat::getName() const {return(this->_name);}
+int	Bureaucrat::getGrade() const {return(this->_grade);}

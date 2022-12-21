@@ -4,6 +4,10 @@
 
 int main()
 {
+	Bureaucrat Bert("Bas", 70);
+	Bureaucrat Bas;
+	Bas = Bert;
+	std::cout << Bas << std::endl;
 	std::cout << "--------to low" << std::endl;
 	try
 	{
