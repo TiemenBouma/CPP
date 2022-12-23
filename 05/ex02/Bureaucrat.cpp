@@ -46,7 +46,7 @@ Bureaucrat::GradeTooLowException::GradeTooLowException()
 	std::cout << "Grade to low exception" << std::endl;
 }
 
-// Bureaucrat::FormSignedException::FormSignedException() 
+// Bureaucrat::AFormSignedException::AFormSignedException() 
 // {
 // 	std::cout << "Already signed exception" << std::endl;
 // }
@@ -63,7 +63,7 @@ void	Bureaucrat::decrement() {
 	this->_grade++;
 }
 
-void	Bureaucrat::signForm(Form& form) {
+void	Bureaucrat::signForm(AForm& form) {
 	try {
 		form.beSigned(*this);
 		std::cout << _name <<  " signed " << form.getName() << std::endl;
@@ -72,9 +72,15 @@ void	Bureaucrat::signForm(Form& form) {
 	catch (const std::exception& exep) {
 		//if (exep.what())
 		std::cout << _name <<  " couldn’t sign " <<  form.getName() <<  " because required sign grade is to high." << std::endl;
-		// if(FormSignedException())
-		// 	std::cout << _name <<  " Already signed " <<  form.getName() <<  " because Form required sign grade is to high." << std::endl;
+		// if(AFormSignedException())
+		// 	std::cout << _name <<  " Already signed " <<  Aform.getName() <<  " because AForm required sign grade is to high." << std::endl;
 	}
+}
+
+void	Bureaucrat::executeForm( AForm const &form ){
+	if (this->getGrade() > form.getReqExe())
+		throw GradeTooLowException();
+	std::cout << getName() << " executed " << form.getName() << std::endl;
 }
 
 std::string	Bureaucrat::getName() const {return(this->_name);}

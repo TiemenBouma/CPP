@@ -13,9 +13,9 @@ Form::Form(const Form& other)
 Form::Form(const std::string& name, const size_t req_grade_sign, const size_t req_grade_exe)
 : _name(name), _is_signed(0), _req_grade_sign(req_grade_sign), _req_grade_exe(req_grade_exe) {
 	if (_req_grade_exe < 1 || _req_grade_sign < 1)
-		throw (Bureaucrat::GradeTooHighException());
+		throw (GradeTooHighException());
 	if (_req_grade_exe > 150 || _req_grade_sign > 150)
-		throw (Bureaucrat::GradeTooLowException());
+		throw (GradeTooLowException());
 	std::cout << _name << ": Form name/grades constructor called " << std::endl;
 }
 
@@ -36,21 +36,21 @@ size_t	Form::getReqExe() const {return(this->_req_grade_exe);}
 
 void Form::beSigned(Bureaucrat& crat) {
 	if (crat.getGrade() > _req_grade_sign)
-		throw Bureaucrat::GradeTooLowException();
+		throw GradeTooLowException();
 	// if (_is_signed == 1)
-	// 	throw Bureaucrat::FormSignedException();
+	// 	throw FormSignedException();
 	_is_signed = 1;
 	std::cout << "Form is now signed!" << std::endl;
 }
 
-// Form::GradeTooHighException::GradeTooHighException() {
-// 	std::cout << "Grade to high exception" << std::endl;
-// }
+Form::GradeTooHighException::GradeTooHighException() {
+	std::cout << "Grade to high exception" << std::endl;
+}
 
-// Form::GradeTooLowException::GradeTooLowException() 
-// {
-// 	std::cout << "Grade to low exception" << std::endl;
-// }
+Form::GradeTooLowException::GradeTooLowException() 
+{
+	std::cout << "Grade to low exception" << std::endl;
+}
 
 // Form::FormSignedException::FormSignedException() 
 // {
@@ -58,6 +58,6 @@ void Form::beSigned(Bureaucrat& crat) {
 // }
 
 std::ostream& operator<<(std::ostream &os, const Form &other) {
-	os << "Form name: " << other.getName() << ", Signed: " << other.getIsSigned() << "Required grade for Sign: " << other.getReqSign() << "Required grade for Exe: " << other.getReqExe();
+	os << "Form name: " << other.getName() << ", Signed: " << other.getIsSigned() << " Required grade for Sign: " << other.getReqSign() << " Required grade for Exe: " << other.getReqExe();
 	return os;
 }
