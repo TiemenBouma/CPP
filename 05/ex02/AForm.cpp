@@ -43,6 +43,7 @@ void AForm::beSigned(Bureaucrat& crat) {
 	std::cout << _name << " is now signed!" << std::endl;
 }
 
+
 AForm::GradeTooHighException::GradeTooHighException() {
 	std::cout << "Grade to high exception" << std::endl;
 }

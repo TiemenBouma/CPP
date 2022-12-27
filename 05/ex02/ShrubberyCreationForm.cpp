@@ -1,6 +1,4 @@
 #include "ShrubberyCreationForm.hpp"
-#include "AForm.hpp"
-
 #include <fstream>
 
 
@@ -27,20 +25,12 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 	std::cout << this->getName() << ": Default ShrubberyCreationForm destructor called" << std::endl;
 }
 
-// void ShrubberyCreationForm::beSigned(Bureaucrat& crat) {
-// 	if (crat.getGrade() > this->getReqSign())
-// 		throw AForm::GradeTooLowException();
-// 	this->setIsSigned(1);
-// 	std::cout << "ShrubberyCreationForm is now signed!" << std::endl;
-// }
-
-void	ShrubberyCreationForm::execute(Bureaucrat const & executor) {
+void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 	if (executor.getGrade() > this->getReqExe())
 		throw AForm::GradeTooLowException();
 	std::ofstream file(_target + "_shrubbery");
 
-    // Write some text to the file
-    file << "Bomen!\n";
+    file << "TREES!\n";
 
 	file << "               ,@@@@@@@," << std::endl;
 	file << "       ,,,.   ,@@@@@@/@@,  .oo8888o." << std::endl;
@@ -52,7 +42,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) {
 	file << "       |o|        | |         | |" << std::endl;
 	file << "       |.|        | |         | |" << std::endl;
 	file << "jgs \\/ ._\\//_/__/  ,\\_//__\\/.  \\_//__/_" << std::endl;
-    // Close the file
+
     file.close();
 
 }

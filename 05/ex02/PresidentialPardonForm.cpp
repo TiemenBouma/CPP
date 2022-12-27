@@ -1,5 +1,4 @@
 #include "PresidentialPardonForm.hpp"
-#include "AForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target)
 :AForm("PresidentialPardonForm", 25, 5), _target(target) {
@@ -25,14 +24,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 	std::cout << this->getName() << ": Default PresidentialPardonForm destructor called" << std::endl;
 }
 
-// void PresidentialPardonForm::beSigned(Bureaucrat& crat) {
-// 	if (crat.getGrade() > this->getReqSign())
-// 		throw AForm::GradeTooLowException();
-// 	this->setIsSigned(1);
-// 	std::cout << "PresidentialPardonForm is now signed!" << std::endl;
-// }
-
-void	PresidentialPardonForm::execute(Bureaucrat const & executor) {
+void	PresidentialPardonForm::execute(Bureaucrat const & executor) const {
 	if (executor.getGrade() > this->getReqExe())
 		throw AForm::GradeTooLowException();
 	std::cout << "Informs that " <<  _target << " has been pardoned by Zaphod Beeblebrox." << std::endl;

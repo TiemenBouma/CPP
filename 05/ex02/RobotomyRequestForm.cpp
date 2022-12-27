@@ -1,15 +1,14 @@
 #include "RobotomyRequestForm.hpp"
 
-#include "AForm.hpp"
 
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target)
-:AForm("RobotomyRequestForm", 145, 137), _target(target) {
+:AForm("RobotomyRequestForm", 72, 45), _target(target) {
 	std::cout << this->getName() << ": Default constructor RobotomyRequestForm called " << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other)
-:AForm("RobotomyRequestForm", 145, 137), _target(other._target) {
+:AForm("RobotomyRequestForm", 72, 45), _target(other._target) {
 	this->setIsSigned(other.getIsSigned());
 	std::cout << this->getName() << ": Copy contructor RobotomyRequestForm called" << std::endl;	
 }
@@ -26,14 +25,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 	std::cout << this->getName() << ": Default RobotomyRequestForm destructor called" << std::endl;
 }
 
-// void RobotomyRequestForm::beSigned(Bureaucrat& crat) {
-// 	if (crat.getGrade() > this->getReqSign())
-// 		throw AForm::GradeTooLowException();
-// 	this->setIsSigned(1);
-// 	std::cout << "RobotomyRequestForm is now signed!" << std::endl;
-// }
-
-void	RobotomyRequestForm::execute(Bureaucrat const & executor) {
+void	RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 	if (executor.getGrade() > this->getReqExe())
 		throw AForm::GradeTooLowException();
 	std::cout << "DRRRRRRIIIIILLLLLLL" << std::endl;

@@ -32,12 +32,6 @@ class	Bureaucrat
 				GradeTooLowException();
 		};
 		
-		// class FormSignedException : public std::exception
-		// { 
-		// 	public:
-		// 		FormSignedException();
-		// };
-		
 		std::string	getName() const;
 		size_t			getGrade() const;
 		void		increment();

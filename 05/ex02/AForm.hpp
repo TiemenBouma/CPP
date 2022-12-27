@@ -2,8 +2,6 @@
 #define AFORM_HPP
 
 #include <string>
-#include <iostream>
-#include <ostream>
 #include <stdexcept>
 #include "Bureaucrat.hpp"
 
@@ -41,10 +39,9 @@ class AForm
 		size_t	getReqExe() const;
 
 		void		setIsSigned(size_t i);
-		//void		setName(std::string& name);
 		
 		void beSigned(Bureaucrat& crat);
-		virtual void execute(Bureaucrat const & executor) = 0;
+		virtual void execute(Bureaucrat const & executor) const = 0 ;
 };
 
 std::ostream& operator<<(std::ostream &os, const AForm &other);
