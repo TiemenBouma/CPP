@@ -14,7 +14,8 @@ int main()
 	AForm					*ptr;
 
 	std::cout << std::endl;
-	intern.makeForm("Bla", "Tiemen");
+	ptr = intern.makeForm("Bla", "Tiemen");
+
 	std::cout << std::endl;
 	ptr = intern.makeForm("PresidentialPardonForm", "Tiemen");
 	std::cout << std::endl;
@@ -28,6 +29,4 @@ int main()
 	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 	delete rrf;
 	std::cout << std::endl;
-	
-
 }
