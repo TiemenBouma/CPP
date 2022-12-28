@@ -37,8 +37,6 @@ size_t	Form::getReqExe() const {return(this->_req_grade_exe);}
 void Form::beSigned(Bureaucrat& crat) {
 	if (crat.getGrade() > _req_grade_sign)
 		throw GradeTooLowException();
-	// if (_is_signed == 1)
-	// 	throw FormSignedException();
 	_is_signed = 1;
 	std::cout << "Form is now signed!" << std::endl;
 }
@@ -51,11 +49,6 @@ Form::GradeTooLowException::GradeTooLowException()
 {
 	std::cout << "Grade to low exception" << std::endl;
 }
-
-// Form::FormSignedException::FormSignedException() 
-// {
-// 	std::cout << "Already signed exception" << std::endl;
-// }
 
 std::ostream& operator<<(std::ostream &os, const Form &other) {
 	os << "Form name: " << other.getName() << ", Signed: " << other.getIsSigned() << " Required grade for Sign: " << other.getReqSign() << " Required grade for Exe: " << other.getReqExe();

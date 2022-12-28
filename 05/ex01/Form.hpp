@@ -35,12 +35,6 @@ class Form
 				GradeTooLowException();
 		};
 
-		// class FormSignedException : public std::exception
-		// { 
-		// 	public:
-		// 		FormSignedException();
-		// };
-
 		std::string	getName() const;
 		size_t	getIsSigned() const;
 		size_t	getReqSign() const;

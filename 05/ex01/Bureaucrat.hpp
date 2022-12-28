@@ -6,7 +6,7 @@
 #include <stdexcept>
 #include "Form.hpp"
 
-class AForm;
+class Form;
 
 class	Bureaucrat
 {
@@ -31,12 +31,6 @@ class	Bureaucrat
 			public:
 				GradeTooLowException();
 		};
-		
-		// class FormSignedException : public std::exception
-		// { 
-		// 	public:
-		// 		FormSignedException();
-		// };
 		
 		std::string	getName() const;
 		size_t			getGrade() const;

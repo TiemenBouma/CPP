@@ -22,7 +22,6 @@ Bureaucrat::Bureaucrat(const std::string name, int grade)
 }
 
 Bureaucrat&	Bureaucrat::operator=( const Bureaucrat& other ) {
-	//_name = other._name;
 	_grade = other._grade;
 	std::cout << "Bureaucrat copy assignment called" << std::endl;
 	return (*this);
@@ -45,11 +44,6 @@ Bureaucrat::GradeTooLowException::GradeTooLowException()
 {
 	std::cout << "Grade to low exception" << std::endl;
 }
-
-// Bureaucrat::FormSignedException::FormSignedException() 
-// {
-// 	std::cout << "Already signed exception" << std::endl;
-// }
 
 void	Bureaucrat::increment() {
 	if (_grade <= 1)
