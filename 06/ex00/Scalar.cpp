@@ -27,11 +27,11 @@ Scalar::Scalar(std::string data)
 : _data(data) {
 	std::stringstream ss;
 	if (_data == "-inf" || _data == "-inff") {
-		std::cout << "char: impossible\nint: impossible\nfloat: -inf\ndouble: -inff" << std::endl;
+		std::cout << "char: impossible\nint: impossible\nfloat: -inff\ndouble: -inf" << std::endl;
 		return ;
 	}
 	if (_data == "+inf" || _data == "+inff") {
-		std::cout << "char: impossible\nint: impossible\nfloat: +inf\ndouble: +inff" << std::endl;
+		std::cout << "char: impossible\nint: impossible\nfloat: +inff\ndouble: +inf" << std::endl;
 		return ;
 	}
 	if (_data.size() == 1 && !(_data.at(0) >= '0' && _data.at(0) <= '9')) {
@@ -68,6 +68,7 @@ Scalar::Scalar(const Scalar &other)
 Scalar &Scalar::operator=(const Scalar &other) {
 	_data = other._data;
 	_value = other._value;
+	return *this;
 }
 
 Scalar::~Scalar() {}
