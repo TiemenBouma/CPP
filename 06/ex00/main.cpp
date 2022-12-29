@@ -9,6 +9,4 @@ int main(int argc, char** argv)
 		return (0);
 	}
 	Scalar convert(static_cast<std::string>(argv[1]));
-	//convert.print();
-
 }

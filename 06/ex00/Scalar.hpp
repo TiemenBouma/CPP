@@ -9,20 +9,17 @@ class Scalar
 {
 public:
     Scalar(std::string data);
+	Scalar(const Scalar &other);
+	Scalar &operator=(const Scalar &other); 
     ~Scalar();
 
 	void	print_int() const;
-	void	print_float() const;
-	void	print_double() const;
+	void	print_float(int precision) const;
+	void	print_double(int precision) const;
 	void	print_char() const;
 
 private:
 	std::string			_data;
-	// int					_d_int;
-	// char				_d_char;
-	// float				_d_float;
-	// double				_d_double;
-
 	long double			_value;
 
 };
