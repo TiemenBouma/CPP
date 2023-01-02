@@ -1,0 +1,10 @@
+#ifndef MAX_HPP
+#define MAX_HPP
+#pragma once
+
+template <typename T> T max(T &a, T &b)
+{
+	return (a > b ? a : b);
+}
+
+#endif
