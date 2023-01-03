@@ -53,6 +53,15 @@
 // }
 int main()
 {
+	Array<int> test;
+	try {
+		test[0] = 1;
+	}
+	catch (std::exception &e){
+
+		std::cout << "array with 0" << std::endl;
+		std::cout << e.what() << std::endl;
+	}
 	//-----------Int Array
 	Array<int> int_array(5);
 	int_array[0] = 1;

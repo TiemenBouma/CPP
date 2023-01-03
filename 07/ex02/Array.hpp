@@ -48,7 +48,6 @@ class Array
 				}
 			}
 			return *this;
-			
 		}
 
 		~Array() {
