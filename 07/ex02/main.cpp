@@ -75,6 +75,10 @@ int main()
 	catch (std::exception &e){
 		std::cout << e.what() << std::endl;
 	}
+	Array<int> test1(10);
+	test1 = int_array;
+	std::cout << test1[2] << std::endl;
+
 	try {
 		std::cout << int_array[5] << std::endl;
 	}
