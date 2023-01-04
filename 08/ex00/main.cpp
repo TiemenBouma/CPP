@@ -5,6 +5,14 @@
 #include <vector>
 
 int main() {
+	std::string value;
+	int find_me;
+	std::cin >> value;
+	std::stringstream ss;
+
+	ss << value;
+	ss >> find_me;
+
 	//------------------------------
 	try	{
 		std::cout << std::endl << "TEST 1" << std::endl;
