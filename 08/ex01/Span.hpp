@@ -18,8 +18,12 @@ public:
     ~Span();
 
 	void addNumber(int value);
+	void addAllNumbers();
 	size_t	shortestSpan();
 	size_t	longestSpan();
+
+	void print();
+
 
 
 };

@@ -72,6 +72,7 @@ class Array
 		unsigned int size() {
 			return (_size);
 		}
+
 };
 
 #endif
